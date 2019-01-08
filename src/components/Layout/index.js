@@ -41,7 +41,7 @@ const Row = ({ columns = 12, marginTop, marginBottom, children, ...props }) => {
  * @param {Number} _.span     Number of columns to span.
  * @param {Object} _.children Children to render within the column.
  */
-const Col = ({ span, children, ...props }) => (
+const Col = ({ span = 12, children, ...props }) => (
   <RowContext.Consumer>
     {columns => (
       <Styled.Col percentageWidth={span / columns} {...props}>
