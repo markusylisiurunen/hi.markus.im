@@ -6,6 +6,7 @@ module.exports = {
     siteUrl: `https://markus.im/`,
   },
   plugins: [
+    'gatsby-plugin-styled-components',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
