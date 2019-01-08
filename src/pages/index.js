@@ -1,69 +1,50 @@
+/**
+ * @overview Front page of the website.
+ */
+
 import React from 'react';
+import Helmet from 'react-helmet';
 import { Link, graphql } from 'gatsby';
 
-import Bio from '../components/Bio';
+import Header from '../components/Header';
 import Layout from '../components/Layout';
-import SEO from '../components/seo';
-import { rhythm } from '../utils/typography';
 
-class BlogIndex extends React.Component {
+class FrontPage extends React.Component {
   render() {
-    const { data } = this.props;
-    const siteTitle = data.site.siteMetadata.title;
-    const posts = data.allMarkdownRemark.edges;
-
     return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO
-          title="All posts"
-          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
-        />
-        <Bio />
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug;
-          return (
-            <div key={node.fields.slug}>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-            </div>
-          );
-        })}
-      </Layout>
+      <React.Fragment>
+        <Helmet>
+          <link
+            rel="stylesheet"
+            href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css"
+          />
+        </Helmet>
+        <Header />
+        <Layout.Container>
+          <Layout.Row marginTop={40}>
+            <Layout.Col>
+              <h2 css="font-size: 1.8em; font-weight: 500; line-height: 1.33;">
+                A full-stack developer with a constant urge to learn more and
+                tackle new challenges.
+              </h2>
+            </Layout.Col>
+          </Layout.Row>
+          <Layout.Row marginTop={24}>
+            <Layout.Col>
+              <div>
+                <p css="color: #000000; margin-bottom: 16px;">Markus Ylisiurunen</p>
+                <span css="color: rgb(120, 120, 120);">
+                  <p css="margin: 0; color: inherit;">Github</p>
+                  <p css="margin: 0; color: inherit;">LinkedIn</p>
+                  <p css="margin: 0; color: inherit;">hello@markus.im</p>
+                </span>
+              </div>
+            </Layout.Col>
+          </Layout.Row>
+        </Layout.Container>
+      </React.Fragment>
     );
   }
 }
 
-export default BlogIndex;
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-          }
-        }
-      }
-    }
-  }
-`;
+export default FrontPage;
