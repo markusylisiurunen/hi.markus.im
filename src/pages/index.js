@@ -11,7 +11,7 @@ import Menu from '../components/Menu';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import Layout from '../components/Layout';
-import EducationCard from '../components/EducationCard';
+import CardEducation from '../components/CardEducation';
 
 class FrontPage extends React.Component {
   render() {
@@ -35,13 +35,13 @@ class FrontPage extends React.Component {
             </Layout.Row>
             <Layout.Row>
               <Layout.Col>
-                <EducationCard
+                <CardEducation
                   school="Tampere University of Technology"
                   degree="Master of Science (Technology)"
                   dates="08/2016 - (05/2021)"
                   description="I have been studying software development and machine learning and currently most exicted by data science and machine learning courses."
                 />
-                <EducationCard
+                <CardEducation
                   school="Ylöjärven lukio"
                   degree="High school graduate"
                   dates="08/2013 - 06/2016"
