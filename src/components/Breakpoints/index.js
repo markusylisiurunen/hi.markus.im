@@ -36,6 +36,8 @@ class Provider extends React.Component {
   };
 
   componentWillMount() {
+    if (typeof window === 'undefined') return;
+
     this.handleResize();
     window.addEventListener('resize', this.handleResize, { passive: true });
   }
