@@ -42,7 +42,7 @@ class FrontPage extends React.Component {
                   degree="Master of Science (Technology)"
                   dates="08/2016 - (05/2021)"
                 >
-                  <p css="margin: 0;">
+                  <p css="margin-bottom: 0;">
                     I have been studying software development and machine
                     learning and currently most exicted by data science and
                     machine learning courses.
@@ -53,7 +53,7 @@ class FrontPage extends React.Component {
                   degree="High school graduate"
                   dates="08/2013 - 06/2016"
                 >
-                  <p css="margin: 0;">
+                  <p css="margin-bottom: 0;">
                     The subjects I wrote were mathematics, physics, chemistry,
                     English and Finnish.
                   </p>
@@ -81,7 +81,7 @@ class FrontPage extends React.Component {
                     back-end technologies written in many languages and
                     integrated with other technologies.
                   </p>
-                  <p>
+                  <p css="margin-bottom: 0;">
                     I have received a certificate of appreciation which is given
                     to few people each year. The certificate was given because
                     of great performance during the last year.
