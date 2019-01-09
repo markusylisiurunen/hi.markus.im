@@ -11,7 +11,7 @@ const Container = styled.div`
   margin: 0 auto;
   max-width: 1120px;
   overflow: hidden;
-  padding: 0 16px;
+  padding: 0 ${p => p.paddingHorizontal === undefined ? '16px' : p.paddingHorizontal};
 `;
 
 /**

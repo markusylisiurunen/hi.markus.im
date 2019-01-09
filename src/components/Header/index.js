@@ -5,24 +5,18 @@
 import React from 'react';
 import Styled from './style';
 
-import State from '../State';
 import Layout from '../Layout';
 
-/**
- * Logo component.
- * @param {Number} _.size Size of the logo.
- */
+const { LogoBar, HamburgerMenuButton } = Styled;
+
 const Logo = ({ size, ...props }) => (
   <div css="display: flex" {...props}>
-    <Styled.LogoBar size={size} />
-    <Styled.LogoBar size={(2 / 3) * size} />
-    <Styled.LogoBar size={size} />
+    <LogoBar size={size} />
+    <LogoBar size={(2 / 3) * size} />
+    <LogoBar size={size} />
   </div>
 );
 
-/**
- * Header component.
- */
 class Header extends React.Component {
   render() {
     return (
@@ -32,13 +26,9 @@ class Header extends React.Component {
             <Logo size={30} />
           </Layout.Col>
           <Layout.Col span={6}>
-            <State.Consumer>
-              {({ toggleMenu }) => (
-                <Styled.HamburgerMenuButton onClick={toggleMenu}>
-                  <i className="fa fa-bars" />
-                </Styled.HamburgerMenuButton>
-              )}
-            </State.Consumer>
+            <HamburgerMenuButton>
+              <i className="fa fa-bars" />
+            </HamburgerMenuButton>
           </Layout.Col>
         </Layout.Row>
       </Layout.Container>
