@@ -18,8 +18,8 @@ class Hero extends React.Component {
         <Layout.Row marginTop={40}>
           <Layout.Col>
             <Styled.Statement>
-              A full-stack developer with a constant urge to learn more and
-              tackle new challenges.
+              Some very generic statement about why everyone should send money
+              to me or at least offer me a job... with a lot of money.
             </Styled.Statement>
           </Layout.Col>
           <Layout.Col>
