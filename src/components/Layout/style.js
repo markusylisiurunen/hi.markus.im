@@ -30,8 +30,12 @@ const Col = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex: 0 0 auto;
-  margin: 0 8px;
+  margin: 0 8px 16px 8px;
   width: calc(${p => p.percentageWidth * 100}% - 16px);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 `;
 
 export default { Container, Row, Col };
