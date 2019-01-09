@@ -1,9 +1,14 @@
+/**
+ * @overview Template for a single blog post.
+ */
+
 import React from 'react';
 import { graphql } from 'gatsby';
 
 class BlogPostTemplate extends React.Component {
   render() {
-    return <p>Work in progress...</p>;
+    const post = this.props.data.markdownRemark;
+    return <h1>{post.frontmatter.title}</h1>;
   }
 }
 
@@ -11,19 +16,9 @@ export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
-    site {
-      siteMetadata {
-        title
-        author
-      }
-    }
     markdownRemark(fields: { slug: { eq: $slug } }) {
-      id
-      excerpt(pruneLength: 160)
-      html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
       }
     }
   }
