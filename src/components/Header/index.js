@@ -26,7 +26,7 @@ class Header extends React.Component {
   render() {
     return (
       <Layout.Container>
-        <Layout.Row marginTop={24}>
+        <Layout.Row marginTop={24} marginBottom={0}>
           <Layout.Col span={6} css="align-items: center;">
             <Logo size={30} />
           </Layout.Col>
