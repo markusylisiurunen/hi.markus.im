@@ -59,6 +59,7 @@ class FrontPage extends React.Component {
         <Header />
         <Hero />
         <SectionEducationAndWork />
+        <div css="height: 40px;" />
       </Breakpoints.Provider>
     );
   }

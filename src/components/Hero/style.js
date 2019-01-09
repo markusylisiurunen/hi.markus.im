@@ -9,6 +9,7 @@ import styled from 'styled-components';
  */
 const Statement = styled.h2`
   font-size: 29px;
+  line-height: 1.45;
   margin-bottom: 32px;
 `;
 
