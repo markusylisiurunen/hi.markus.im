@@ -4,16 +4,7 @@
 
 import styled from 'styled-components';
 
-const Container = styled.div`
-  margin-bottom: 32px;
-  width: 100%;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-`;
-
-const Company = styled.h3`
+const Employer = styled.h3`
   font-size: 1em;
   font-weight: 700;
   line-height: 1.45;
@@ -21,7 +12,7 @@ const Company = styled.h3`
   margin-top: 0;
 `;
 
-const Title = styled.p`
+const JobTitle = styled.p`
   margin-bottom: 4px;
   margin-top: 0;
 `;
@@ -32,4 +23,4 @@ const Dates = styled.p`
   margin-top: 0;
 `;
 
-export default { Container, Company, Title, Dates };
+export default { Employer, JobTitle, Dates };

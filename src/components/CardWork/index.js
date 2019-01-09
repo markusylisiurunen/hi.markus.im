@@ -3,17 +3,19 @@
  */
 
 import React from 'react';
-import styled from './style';
+import Styled from './style';
 
-const { Container, Company, Title, Dates } = styled;
+import Card from '../Card';
 
-const CardWork = ({ company, title, dates, children }) => (
-  <Container>
-    <Company>{company}</Company>
-    <Title>{title}</Title>
+const { Employer, JobTitle, Dates } = Styled;
+
+const CardWork = ({ employer, jobTitle, dates, children, ...props }) => (
+  <Card border="none" padding="0px" {...props}>
+    <Employer>{employer}</Employer>
+    <JobTitle>{jobTitle}</JobTitle>
     <Dates>{dates}</Dates>
     {children}
-  </Container>
+  </Card>
 );
 
 export default CardWork;

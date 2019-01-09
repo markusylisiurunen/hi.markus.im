@@ -11,10 +11,10 @@ import Menu from '../components/Menu';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import Layout from '../components/Layout';
-import CardWork from '../components/CardWork';
 import CardProject from '../components/CardProject';
 
 import SectionEducation from '../components/SectionEducation';
+import SectionWork from '../components/SectionWork';
 
 class FrontPage extends React.Component {
   render() {
@@ -31,38 +31,8 @@ class FrontPage extends React.Component {
           <Header />
           <Hero />
           <SectionEducation />
+          <SectionWork />
           <Layout.Container>
-            {/* Education section */}
-
-            {/* Work section */}
-            <Layout.Row marginTop={32} marginBottom={0}>
-              <Layout.Col>
-                <h2>Work</h2>
-              </Layout.Col>
-            </Layout.Row>
-            <Layout.Row>
-              <Layout.Col>
-                <CardWork
-                  company="Intopalo Digital Oy"
-                  title="Software Developer"
-                  dates="05/2017 - present"
-                >
-                  <p>
-                    I have worked in various customer projects as a software
-                    developer with teams of three to seven people. Majority of
-                    the time I have been working with both front-end and
-                    back-end technologies written in many languages and
-                    integrated with other technologies.
-                  </p>
-                  <p css="margin-bottom: 0;">
-                    I have received a certificate of appreciation which is given
-                    to few people each year. The certificate was given because
-                    of great performance during the last year.
-                  </p>
-                </CardWork>
-              </Layout.Col>
-            </Layout.Row>
-
             {/* Project section */}
             <Layout.Row marginTop={32} marginBottom={0}>
               <Layout.Col>
