@@ -8,6 +8,8 @@ import styled from 'styled-components';
  * A styled component for the grid container.
  */
 const Container = styled.div`
+  margin: 0 auto;
+  max-width: 1120px;
   overflow: hidden;
   padding: 0 16px;
 `;
