@@ -7,6 +7,7 @@ import Helmet from 'react-helmet';
 import { Link, graphql } from 'gatsby';
 
 import Header from '../components/Header';
+import Hero from '../components/Hero';
 import Layout from '../components/Layout';
 
 class FrontPage extends React.Component {
@@ -20,28 +21,7 @@ class FrontPage extends React.Component {
           />
         </Helmet>
         <Header />
-        <Layout.Container>
-          <Layout.Row marginTop={40}>
-            <Layout.Col>
-              <h2 css="font-size: 1.8em; font-weight: 500; line-height: 1.33;">
-                A full-stack developer with a constant urge to learn more and
-                tackle new challenges.
-              </h2>
-            </Layout.Col>
-          </Layout.Row>
-          <Layout.Row marginTop={24}>
-            <Layout.Col>
-              <div>
-                <p css="color: #000000; margin-bottom: 16px;">Markus Ylisiurunen</p>
-                <span css="color: rgb(120, 120, 120);">
-                  <p css="margin: 0; color: inherit;">Github</p>
-                  <p css="margin: 0; color: inherit;">LinkedIn</p>
-                  <p css="margin: 0; color: inherit;">hello@markus.im</p>
-                </span>
-              </div>
-            </Layout.Col>
-          </Layout.Row>
-        </Layout.Container>
+        <Hero />
       </React.Fragment>
     );
   }
