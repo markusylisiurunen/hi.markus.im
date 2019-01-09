@@ -3,15 +3,17 @@
  */
 
 import React from 'react';
-import Styled from './style';
+import styled from './style';
 
-const EducationCard = ({ school, degree, dates, description }) => (
-  <Styled.Container>
-    <Styled.School>{school}</Styled.School>
-    <Styled.Degree>{degree}</Styled.Degree>
-    <Styled.Year>{dates}</Styled.Year>
-    {description && <Styled.Description>{description}</Styled.Description>}
-  </Styled.Container>
+const { Container, School, Degree, Dates } = styled;
+
+const EducationCard = ({ school, degree, dates, children }) => (
+  <Container>
+    <School>{school}</School>
+    <Degree>{degree}</Degree>
+    <Dates>{dates}</Dates>
+    {children}
+  </Container>
 );
 
 export default EducationCard;

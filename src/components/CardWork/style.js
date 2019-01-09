@@ -7,6 +7,10 @@ import styled from 'styled-components';
 const Container = styled.div`
   margin-bottom: 32px;
   width: 100%;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 `;
 
 const Company = styled.h3`
