@@ -5,6 +5,7 @@
 import React from 'react';
 import Styled from './style';
 
+import State from '../State';
 import Layout from '../Layout';
 
 /**
@@ -26,14 +27,18 @@ class Header extends React.Component {
   render() {
     return (
       <Layout.Container>
-        <Layout.Row marginTop={24} marginBottom={0}>
+        <Layout.Row marginTop={24} marginBottom={8}>
           <Layout.Col span={6} css="align-items: center;">
             <Logo size={30} />
           </Layout.Col>
           <Layout.Col span={6}>
-            <Styled.HamburgerMenuButton>
-              <i className="fa fa-bars" />
-            </Styled.HamburgerMenuButton>
+            <State.Consumer>
+              {({ toggleMenu }) => (
+                <Styled.HamburgerMenuButton onClick={toggleMenu}>
+                  <i className="fa fa-bars" />
+                </Styled.HamburgerMenuButton>
+              )}
+            </State.Consumer>
           </Layout.Col>
         </Layout.Row>
       </Layout.Container>
