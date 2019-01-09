@@ -6,30 +6,7 @@ import React from 'react';
 import Styled from './style';
 
 import Layout from '../Layout';
-
-/**
- * Bio component.
- */
-const Bio = () => (
-  <div css="width: 100%;">
-    <Styled.Name>Markus Ylisiurunen</Styled.Name>
-    <Styled.Social
-      href="https://github.com/markusylisiurunen"
-      hoverColor="#4078c0"
-    >
-      Github
-    </Styled.Social>
-    <Styled.Social
-      href="https://www.linkedin.com/in/markus-ylisiurunen-654720174/"
-      hoverColor="#0077b5"
-    >
-      LinkedIn
-    </Styled.Social>
-    <Styled.Social href="mailto:hello@markus.im" hoverColor="#fd5c63">
-      hello@markus.im
-    </Styled.Social>
-  </div>
-);
+import CardBio from '../CardBio';
 
 /**
  * Hero component.
@@ -46,7 +23,16 @@ class Hero extends React.Component {
             </Styled.Statement>
           </Layout.Col>
           <Layout.Col>
-            <Bio />
+            <CardBio
+              name="Markus Ylisiurunen"
+              email="hello@markus.im"
+              school="Tampere University of Technology"
+              employer="Intopalo Digital Oy"
+              socialLinks={[
+                { name: 'Github', href: '' },
+                { name: 'LinkedIn', href: '' },
+              ]}
+            />
           </Layout.Col>
         </Layout.Row>
       </Layout.Container>
