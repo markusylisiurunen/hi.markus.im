@@ -3,17 +3,19 @@
  */
 
 import React from 'react';
-import styled from './style';
+import Styled from './style';
 
-const { Container, School, Degree, Dates } = styled;
+import Card from '../Card';
 
-const EducationCard = ({ school, degree, dates, children }) => (
-  <Container>
+const { School, Degree, Dates } = Styled;
+
+const CardEducation = ({ school, degree, dates, children, ...props }) => (
+  <Card border="none" padding="0px" {...props}>
     <School>{school}</School>
     <Degree>{degree}</Degree>
     <Dates>{dates}</Dates>
     {children}
-  </Container>
+  </Card>
 );
 
-export default EducationCard;
+export default CardEducation;

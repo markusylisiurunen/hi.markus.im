@@ -4,15 +4,6 @@
 
 import styled from 'styled-components';
 
-const Container = styled.div`
-  margin-bottom: 32px;
-  width: 100%;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-`;
-
 const School = styled.h3`
   font-size: 1em;
   font-weight: 700;
@@ -32,4 +23,4 @@ const Dates = styled.p`
   margin-top: 0;
 `;
 
-export default { Container, School, Degree, Dates };
+export default { School, Degree, Dates };
