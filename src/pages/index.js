@@ -13,6 +13,7 @@ import Hero from '../components/Hero';
 import Layout from '../components/Layout';
 import CardEducation from '../components/CardEducation';
 import CardWork from '../components/CardWork';
+import CardProject from '../components/CardProject';
 
 class FrontPage extends React.Component {
   render() {
@@ -87,6 +88,29 @@ class FrontPage extends React.Component {
                     of great performance during the last year.
                   </p>
                 </CardWork>
+              </Layout.Col>
+            </Layout.Row>
+
+            {/* Project section */}
+            <Layout.Row marginTop={32} marginBottom={0}>
+              <Layout.Col>
+                <h2>Projects</h2>
+              </Layout.Col>
+            </Layout.Row>
+            <Layout.Row marginBottom={40}>
+              <Layout.Col>
+                <CardProject
+                  name="Timelined"
+                  href="https://timelined.markus.im"
+                  repository="https://github.com/markusylisiurunen/timelined"
+                  technologies={['Node.js', 'Docker Swarm', 'React', 'GraphQL']}
+                >
+                  <p css="margin-bottom: 0;">
+                    A minimalistic time tracking application with the ability to
+                    track time based on tags and set weekly goals based on tag
+                    filters.
+                  </p>
+                </CardProject>
               </Layout.Col>
             </Layout.Row>
           </Layout.Container>
