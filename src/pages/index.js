@@ -5,64 +5,31 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 
-import Breakpoints from '../components/Breakpoints';
-import Header from '../components/Header';
-import Hero from '../components/Hero';
+import Breakpoints, { withBreakpoints } from '../components/Breakpoints';
 import Layout from '../components/Layout';
 import SectionEducation from '../components/SectionEducation';
 import SectionWork from '../components/SectionWork';
 
-const Head = () => (
-  <Helmet>
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css"
-    />
-  </Helmet>
+const FrontPage = withBreakpoints(({ breakpoints, media }) => (
+  <Layout.Container>
+    <Layout.Row marginTop={64}>
+      <Layout.Col span={breakpoints[media] >= breakpoints.tablet ? 6 : 12}>
+        <SectionEducation />
+      </Layout.Col>
+      <Layout.Col span={breakpoints[media] >= breakpoints.tablet ? 6 : 12}>
+        <SectionWork />
+      </Layout.Col>
+    </Layout.Row>
+  </Layout.Container>
+));
+
+export default () => (
+  <Breakpoints>
+    {/* prettier-ignore */}
+    <Helmet>
+      <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css" />
+      <title>Markus Ylisiurunen</title>
+    </Helmet>
+    <FrontPage />
+  </Breakpoints>
 );
-
-const SectionEducationAndWork = () => (
-  <Breakpoints.Consumer>
-    {({ breakpoints, currentBreakpoint }) => {
-      const isAtLeastTablet =
-        breakpoints[currentBreakpoint] >= breakpoints.tablet;
-
-      return (
-        <Layout.Container paddingHorizontal="0">
-          <Layout.Row marginBottom={0}>
-            <Layout.Col span={isAtLeastTablet ? 6 : 12}>
-              <SectionEducation />
-            </Layout.Col>
-            <Layout.Col span={isAtLeastTablet ? 6 : 12}>
-              <SectionWork />
-            </Layout.Col>
-          </Layout.Row>
-        </Layout.Container>
-      );
-    }}
-  </Breakpoints.Consumer>
-);
-
-class FrontPage extends React.Component {
-  state = {
-    breakpoints: {
-      mobile: 0,
-      tablet: 768,
-      laptop: 1024,
-    },
-  };
-
-  render() {
-    return (
-      <Breakpoints.Provider breakpoints={this.state.breakpoints}>
-        <Head />
-        <Header />
-        <Hero />
-        <SectionEducationAndWork />
-        <div css="height: 40px;" />
-      </Breakpoints.Provider>
-    );
-  }
-}
-
-export default FrontPage;
