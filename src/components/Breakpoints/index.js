@@ -1,61 +1,109 @@
 /**
- * @overview Breakpoints component.
+ * @overview Breakpoints component for detecting device/window sizes.
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
+import { sortBreakpoints, getMedia } from './utils';
 
-const BreakpointsContext = React.createContext({});
+const BreakpointsContext = React.createContext();
 
-class Provider extends React.Component {
-  state = {
-    currentBreakpoint: null,
+class Breakpoints extends React.Component {
+  // Define the default properties for the component
+  static defaultProps = {
+    breakpoints: {
+      mobile: 0,
+      tablet: 768,
+      laptop: 1024,
+    },
   };
 
-  handleResize = () => {
-    const windowWidth = window.innerWidth;
-    const { breakpoints } = this.props;
-    const { currentBreakpoint } = this.state;
-
-    const breakpointNames = Object.keys(breakpoints);
-    let newBreakpoint = null;
-
-    for (let i = 0; i < breakpointNames.length; i += 1) {
-      const bpName = breakpointNames[i];
-      const bpWidth = breakpoints[bpName];
-
-      if (bpWidth > windowWidth) continue;
-
-      if (newBreakpoint === null || breakpoints[newBreakpoint] < bpWidth) {
-        newBreakpoint = bpName;
-      }
-    }
-
-    if (currentBreakpoint !== newBreakpoint) {
-      this.setState({ currentBreakpoint: newBreakpoint });
-    }
+  // Define the prop types
+  static propTypes = {
+    breakpoints: PropTypes.objectOf(PropTypes.number),
   };
 
-  componentWillMount() {
+  /**
+   * Initialise the component.
+   */
+  constructor(props) {
+    super(props);
+
+    const { breakpoints } = props;
+    const sortedBreakpoints = sortBreakpoints(breakpoints);
+
+    const state = { sortedBreakpoints, media: null };
+
+    if (typeof window !== 'undefined') {
+      state.media = getMedia(sortedBreakpoints);
+    }
+
+    this.state = state;
+  }
+
+  /**
+   * Update the computed state.
+   */
+  componentWillReceiveProps(nextProps) {
+    const { breakpoints } = nextProps;
+
+    if (breakpoints !== this.props.breakpoints) {
+      const sortedBreakpoints = sortBreakpoints(breakpoints);
+
+      this.setState({
+        sortedBreakpoints,
+        media: getMedia(sortedBreakpoints),
+      });
+    }
+  }
+
+  /**
+   * Attach a resize event listener to the window.
+   */
+  componentDidMount() {
     if (typeof window === 'undefined') return;
-
-    this.handleResize();
-    window.addEventListener('resize', this.handleResize, { passive: true });
+    window.addEventListener('resize', this.onResize, { passive: true });
   }
 
+  /**
+   * Remove the resize event listener.
+   */
   componentWillUnmount() {
-    window.removeEventListener('resize', this.handleResize);
+    if (typeof window === 'undefined') return;
+    window.removeEventListener('resize', this.onResize);
   }
+
+  /**
+   * Handler for the resize event.
+   */
+  onResize = () => {
+    const { sortedBreakpoints, media } = this.state;
+    const newBreakpoint = getMedia(sortedBreakpoints);
+
+    if (media !== newBreakpoint) {
+      this.setState({ media: newBreakpoint });
+    }
+  };
 
   render() {
-    const { breakpoints } = this.props;
-    const { currentBreakpoint } = this.state;
+    const { breakpoints, children } = this.props;
+    const { media } = this.state;
 
     return (
-      <BreakpointsContext.Provider value={{ breakpoints, currentBreakpoint }}>
-        {this.props.children}
+      <BreakpointsContext.Provider value={{ breakpoints, media }}>
+        {children && children}
       </BreakpointsContext.Provider>
     );
   }
 }
 
-export default { Provider, Consumer: BreakpointsContext.Consumer };
+export default Breakpoints;
+
+/**
+ * A higher-order component to pass down the breakpoint data.
+ */
+export const withBreakpoints = WrappedComponent => props => (
+  <BreakpointsContext.Consumer>
+    {contextData => <WrappedComponent {...contextData} {...props} />}
+  </BreakpointsContext.Consumer>
+);
