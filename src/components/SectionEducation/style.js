@@ -1,8 +1,12 @@
 /**
- * @overview Styled components for an education card.
+ * @overview Styled components for the SectionEducation component.
  */
 
 import styled from 'styled-components';
+
+const Container = styled.div`
+  width: 100%;
+`;
 
 const School = styled.h3`
   font-size: 1em;
@@ -23,4 +27,4 @@ const Dates = styled.p`
   margin-top: 0;
 `;
 
-export default { School, Degree, Dates };
+export default { Container, School, Degree, Dates };

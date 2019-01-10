@@ -25,10 +25,6 @@ const Container = styled.a`
   padding: 12px 8px;
   position: relative;
 
-  &:last-child {
-    margin-bottom: 0;
-  }
-
   &:hover ${DownloadIcon} {
     color: rgba(0, 0, 0, 0.33);
     top: 50%;

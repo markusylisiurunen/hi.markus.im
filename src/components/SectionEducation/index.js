@@ -1,12 +1,14 @@
 /**
- * @overview Education section component.
+ * @overview Component for showing the education history.
  */
 
 import React from 'react';
+import Styled from './style';
 
-import Layout from '../Layout';
 import Attachment from '../Attachment';
-import CardEducation from '../CardEducation';
+import Card from '../Card';
+
+const { Container, School, Degree, Dates } = Styled;
 
 const educationData = [
   {
@@ -36,37 +38,39 @@ const educationData = [
   },
 ];
 
+const CardEducation = ({ school, degree, dates, children, ...props }) => (
+  <Card border="none" padding="0" {...props}>
+    <School>{school}</School>
+    <Degree>{degree}</Degree>
+    <Dates>{dates}</Dates>
+    {children && children}
+  </Card>
+);
+
 const SectionEducation = () => (
-  <Layout.Container>
-    <Layout.Row marginTop={32} marginBottom={0}>
-      <Layout.Col>
-        <h2>Education</h2>
-      </Layout.Col>
-    </Layout.Row>
-    <Layout.Row marginBottom={0}>
-      {educationData.map((education, i) => (
-        <Layout.Col key={education.school + education.degree}>
-          <CardEducation
-            school={education.school}
-            degree={education.degree}
-            dates={education.dates}
-            marginBottom={i === educationData.length - 1 ? '0' : '16px'}
-          >
-            {education.description.map(description => (
-              <p key={description}>{description}</p>
-            ))}
-            {education.attachments.map(attachment => (
-              <Attachment
-                type={attachment.type}
-                name={attachment.name}
-                key={attachment.name}
-              />
-            ))}
-          </CardEducation>
-        </Layout.Col>
-      ))}
-    </Layout.Row>
-  </Layout.Container>
+  <Container>
+    <h2>Education</h2>
+    {educationData.map((education, i) => (
+      <CardEducation
+        school={education.school}
+        degree={education.degree}
+        dates={education.dates}
+        marginBottom={i === educationData.length - 1 ? '0px' : '32px'}
+        key={education.school + education.degree}
+      >
+        {education.description.map(description => (
+          <p key={description}>{description}</p>
+        ))}
+        {education.attachments.map(attachment => (
+          <Attachment
+            type={attachment.type}
+            name={attachment.name}
+            key={attachment.name}
+          />
+        ))}
+      </CardEducation>
+    ))}
+  </Container>
 );
 
 export default SectionEducation;
