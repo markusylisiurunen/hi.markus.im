@@ -11,3 +11,6 @@ export const toPixelOrPercentage = (value, fallback) => {
   if (value === undefined || value === null) return fallback;
   return typeof value === 'string' ? value : `${value}px`;
 };
+
+export const propWithDefault = (prop, defaultValue) =>
+  prop === undefined ? defaultValue : prop;
