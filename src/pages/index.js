@@ -7,12 +7,18 @@ import Helmet from 'react-helmet';
 
 import Breakpoints, { withBreakpoints } from '../components/Breakpoints';
 import Layout from '../components/Layout';
+import Navigation from '../components/Navigation';
 import SectionEducation from '../components/SectionEducation';
 import SectionWork from '../components/SectionWork';
 
 const FrontPage = withBreakpoints(({ breakpoints, media }) => (
   <Layout.Container>
-    <Layout.Row marginTop={64}>
+    <Layout.Row>
+      <Layout.Col>
+        <Navigation />
+      </Layout.Col>
+    </Layout.Row>
+    <Layout.Row>
       <Layout.Col span={breakpoints[media] >= breakpoints.tablet ? 6 : 12}>
         <SectionEducation />
       </Layout.Col>
