@@ -1,8 +1,12 @@
 /**
- * @overview Styled components for a work card.
+ * @overview Styled components for the SectionWork component.
  */
 
 import styled from 'styled-components';
+
+const Container = styled.div`
+  width: 100%;
+`;
 
 const Employer = styled.h3`
   font-size: 1em;
@@ -23,4 +27,4 @@ const Dates = styled.p`
   margin-top: 0;
 `;
 
-export default { Employer, JobTitle, Dates };
+export default { Container, Employer, JobTitle, Dates };

@@ -1,12 +1,14 @@
 /**
- * @overview Work section component.
+ * @overview Component for showing the work history.
  */
 
 import React from 'react';
+import Styled from './style';
 
-import Layout from '../Layout';
 import Attachment from '../Attachment';
-import CardWork from '../CardWork';
+import Card from '../Card';
+
+const { Container, Employer, JobTitle, Dates } = Styled;
 
 const workData = [
   {
@@ -23,37 +25,39 @@ const workData = [
   },
 ];
 
+const CardWork = ({ employer, jobTitle, dates, children, ...props }) => (
+  <Card border="none" padding="0" {...props}>
+    <Employer>{employer}</Employer>
+    <JobTitle>{jobTitle}</JobTitle>
+    <Dates>{dates}</Dates>
+    {children && children}
+  </Card>
+);
+
 const SectionWork = () => (
-  <Layout.Container>
-    <Layout.Row marginTop={32} marginBottom={0}>
-      <Layout.Col>
-        <h2>Work</h2>
-      </Layout.Col>
-    </Layout.Row>
-    <Layout.Row marginBottom={0}>
-      {workData.map((work, i) => (
-        <Layout.Col key={work.employer + work.jobTitle}>
-          <CardWork
-            employer={work.employer}
-            jobTitle={work.jobTitle}
-            dates={work.dates}
-            marginBottom={i === workData.length - 1 ? '0' : '16px'}
-          >
-            {work.description.map(description => (
-              <p key={description}>{description}</p>
-            ))}
-            {work.attachments.map(attachment => (
-              <Attachment
-                type={attachment.type}
-                name={attachment.name}
-                key={attachment.name}
-              />
-            ))}
-          </CardWork>
-        </Layout.Col>
-      ))}
-    </Layout.Row>
-  </Layout.Container>
+  <Container>
+    <h2>Work</h2>
+    {workData.map((work, i) => (
+      <CardWork
+        employer={work.employer}
+        jobTitle={work.jobTitle}
+        dates={work.dates}
+        marginBottom={i === workData.length - 1 ? '0px' : '32px'}
+        key={work.employer + work.jobTitle}
+      >
+        {work.description.map(description => (
+          <p key={description}>{description}</p>
+        ))}
+        {work.attachments.map(attachment => (
+          <Attachment
+            type={attachment.type}
+            name={attachment.name}
+            key={attachment.name}
+          />
+        ))}
+      </CardWork>
+    ))}
+  </Container>
 );
 
 export default SectionWork;
