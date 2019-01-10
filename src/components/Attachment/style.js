@@ -30,7 +30,7 @@ const Container = styled.a`
   }
 
   &:hover ${DownloadIcon} {
-    color: rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.33);
     top: 50%;
   }
 `;
