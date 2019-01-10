@@ -32,13 +32,9 @@ class Breakpoints extends React.Component {
     const { breakpoints } = props;
     const sortedBreakpoints = sortBreakpoints(breakpoints);
 
-    const state = { sortedBreakpoints, media: null };
-
-    if (typeof window !== 'undefined') {
-      state.media = getMedia(sortedBreakpoints);
-    }
-
-    this.state = state;
+    // FIXME: See the FIXME comment below. This is to force SSR and re-hydration to be the exact
+    // same.
+    this.state = { sortedBreakpoints, media: sortedBreakpoints[0][0] };
   }
 
   /**
@@ -62,6 +58,13 @@ class Breakpoints extends React.Component {
    */
   componentDidMount() {
     if (typeof window === 'undefined') return;
+
+    // FIXME: There is an issue with styled-components SSR and doing this type of layout
+    // manipulation. Currently styled-components will use the SSR version during re-hydration and
+    // does not update the classes (= styles) even if the prop differs from the server version. To
+    // get around this, we need to update the prop on mount so that the layout settles.
+    this.onResize();
+
     window.addEventListener('resize', this.onResize, { passive: true });
   }
 
