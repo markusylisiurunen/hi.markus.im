@@ -5,6 +5,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 
+import Bio from '../components/Bio';
 import Breakpoints, { withBreakpoints } from '../components/Breakpoints';
 import Layout from '../components/Layout';
 import Navigation from '../components/Navigation';
@@ -18,6 +19,7 @@ const FrontPage = withBreakpoints(({ breakpoints, media }) => (
         <Navigation />
       </Layout.Col>
     </Layout.Row>
+    <Bio />
     <Layout.Row>
       <Layout.Col span={breakpoints[media] >= breakpoints.tablet ? 6 : 12}>
         <SectionEducation />
