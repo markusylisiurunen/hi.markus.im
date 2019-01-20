@@ -5,35 +5,19 @@
 import React from 'react';
 import Styled from './style';
 
-import { withBreakpoints } from '../Breakpoints';
-
-const { Container, LogoBar, NavigationLink } = Styled;
-
-const Logo = ({ size }) => (
+const Logo = () => (
   <div css="display: flex;">
-    <LogoBar size={size} />
-    <LogoBar size={(2 / 3) * size} />
-    <LogoBar size={size} />
+    <Styled.LogoBar size={34} />
+    <Styled.LogoBar size={23} />
+    <Styled.LogoBar size={34} />
   </div>
 );
 
-const NavigationLinks = withBreakpoints(
-  ({ breakpoints, media }) =>
-    breakpoints[media] >= breakpoints.tablet && (
-      <div css="display: flex;">
-        <NavigationLink active>About</NavigationLink>
-        <NavigationLink>Education</NavigationLink>
-        <NavigationLink>Work</NavigationLink>
-        <NavigationLink>Projects</NavigationLink>
-      </div>
-    )
-);
-
 const Navigation = () => (
-  <Container>
-    <Logo size="32" />
-    <NavigationLinks />
-  </Container>
+  <Styled.Container>
+    <Logo />
+    <Styled.ContactMe href="mailto:hi@markus.im">Say hello</Styled.ContactMe>
+  </Styled.Container>
 );
 
 export default Navigation;
