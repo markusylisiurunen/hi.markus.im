@@ -1,16 +1,17 @@
 /**
- * @overview Component for bio.
+ * @overview Biography component.
  */
 
 import React from 'react';
 import Styled from './style';
 import { getMyAge } from './util';
 import colors from '../../utils/colors';
+
 import Layout from '../Layout';
 import Link from '../Link';
 
 const Bio = () => (
-  <Layout.Row marginBottom={64}>
+  <Layout.Row marginTop={48} marginBottom={0}>
     <Layout.Col spanLaptop={6}>
       <Styled.Name>Markus Ylisiurunen</Styled.Name>
       <Styled.Intro>
