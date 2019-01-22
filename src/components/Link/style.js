@@ -20,8 +20,11 @@ const Arrow = styled.i`
 const Link = styled.a`
   color: ${p => p.color};
   text-decoration: none;
+  transition: color 275ms linear;
 
   &:hover {
+    color: ${p => p.hoverColor || p.color};
+
     ${Text} {
       text-decoration: underline;
     }
