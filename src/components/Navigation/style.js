@@ -9,7 +9,7 @@ const Container = styled.div`
   align-items: center;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 48px;
+  margin-bottom: 40px;
   margin-top: 32px;
   width: 100%;
 
