@@ -5,19 +5,19 @@
 import Typography from 'typography';
 
 const typography = new Typography({
-  baseFontSize: 15,
-  headerFontFamily: ['Noto Sans', 'sans-serif'],
-  bodyFontFamily: ['Noto Serif', 'serif'],
+  baseFontSize: 16,
+  headerFontFamily: ['Raleway', 'sans-serif'],
+  bodyFontFamily: ['Montserrat', 'serif'],
   headerGray: 12,
   bodyGray: 12,
   googleFonts: [
     {
-      name: 'Noto Sans',
-      styles: ['400', '700'],
+      name: 'Raleway',
+      styles: ['400', '500', '600', '700'],
     },
     {
-      name: 'Noto Serif',
-      styles: ['400', '700'],
+      name: 'Montserrat',
+      styles: ['400', '500', '600', '700'],
     },
   ],
 });
