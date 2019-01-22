@@ -28,7 +28,7 @@ const Bio = () => (
       <Styled.Intro>
         I have almost two years of professional experience as a software
         developer at{' '}
-        <Link href="https://intopalodigital.fi/" inline>
+        <Link href="https://intopalodigital.fi/" target="_blank" inline>
           Intopalo Digital
         </Link>{' '}
         where I have contributed in various customer projects. I have had the
@@ -45,6 +45,7 @@ const Bio = () => (
         </Styled.SocialLink>
         <Styled.SocialLink
           href="https://www.linkedin.com/in/markus-ylisiurunen-654720174/"
+          target="_blank"
           hoverColor={colors.brandLinkedin}
           block
         >
@@ -52,6 +53,7 @@ const Bio = () => (
         </Styled.SocialLink>
         <Styled.SocialLink
           href="https://github.com/markusylisiurunen"
+          target="_blank"
           hoverColor={colors.brandGithub}
           block
         >
