@@ -1,6 +1,7 @@
 {
   "version": 2,
   "name": "markus.im",
+  "alias": ["markus.im"],
   "builds": [
     {
       "src": "package.json",

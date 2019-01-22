@@ -1,69 +1,44 @@
+/**
+ * @overview Front page of the website.
+ */
+
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import Helmet from 'react-helmet';
 
 import Bio from '../components/Bio';
+import Projects from '../components/Projects';
 import Layout from '../components/Layout';
-import SEO from '../components/seo';
-import { rhythm } from '../utils/typography';
+import Navigation from '../components/Navigation';
+import SectionEducation from '../components/SectionEducation';
+import SectionWork from '../components/SectionWork';
 
-class BlogIndex extends React.Component {
-  render() {
-    const { data } = this.props;
-    const siteTitle = data.site.siteMetadata.title;
-    const posts = data.allMarkdownRemark.edges;
+const FrontPage = () => (
+  <Layout.Container>
+    <Layout.Row>
+      <Layout.Col>
+        <Navigation />
+      </Layout.Col>
+    </Layout.Row>
+    <Bio />
+    <Layout.Row marginBottom={64}>
+      <Layout.Col spanTablet={6}>
+        <SectionEducation />
+      </Layout.Col>
+      <Layout.Col spanTablet={6}>
+        <SectionWork />
+      </Layout.Col>
+    </Layout.Row>
+    <Projects />
+  </Layout.Container>
+);
 
-    return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO
-          title="All posts"
-          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
-        />
-        <Bio />
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug;
-          return (
-            <div key={node.fields.slug}>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-            </div>
-          );
-        })}
-      </Layout>
-    );
-  }
-}
-
-export default BlogIndex;
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-          }
-        }
-      }
-    }
-  }
-`;
+export default () => (
+  <React.Fragment>
+    {/* prettier-ignore */}
+    <Helmet>
+      <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css" />
+      <title>Markus Ylisiurunen</title>
+    </Helmet>
+    <FrontPage />
+  </React.Fragment>
+);
