@@ -4,51 +4,59 @@
 
 import React from 'react';
 import Styled from './style';
-
+import { getMyAge } from './util';
+import colors from '../../utils/colors';
 import Layout from '../Layout';
+import Link from '../Link';
 
 const Bio = () => (
   <Layout.Row marginBottom={64}>
-    <Layout.Col spanTablet={6}>
+    <Layout.Col spanLaptop={6}>
       <Styled.Name>Markus Ylisiurunen</Styled.Name>
+      <Styled.Intro>
+        I am a {getMyAge()}-year-old computer science student studying at{' '}
+        <Link href="https://www.tuni.fi/fi" target="_blank" inline>
+          TUNI
+        </Link>{' '}
+        majoring in Software Engineering and minoring in Machine Learning.
+        Currently I am most interested in the web as a platform, machine
+        learning and artificial intelligence. In fact, I am planning to major in
+        Machine Learning, Data Science and Artificial Intelligence in my
+        Master's studies.
+      </Styled.Intro>
+      <Styled.Intro>
+        I have almost two years of professional experience as a software
+        developer at{' '}
+        <Link href="https://intopalodigital.fi/" inline>
+          Intopalo Digital
+        </Link>{' '}
+        where I have contributed in various customer projects. I have had the
+        change to grow, learn new technologies and soft skills, solve problems
+        and have an impact on our customer's businesses.
+      </Styled.Intro>
       <Styled.SocialContainer>
-        <Styled.Social href="mailto:hi@markus.im" color="#c43a64">
-          <Styled.SocialIcon className="fa fa-at" />
-          <span>hi@markus.im</span>
-        </Styled.Social>
-        <Styled.Social
-          href="https://www.linkedin.com/in/markus-ylisiurunen-654720174"
-          target="_blank"
-          color="#0077b5"
+        <Styled.SocialLink
+          href="mailto:hi@markus.im"
+          hoverColor={colors.brandGmail}
+          block
         >
-          <Styled.SocialIcon className="fa fa-linkedin" />
-          <span>LinkedIn</span>
-        </Styled.Social>
-        <Styled.Social
+          hi@markus.im
+        </Styled.SocialLink>
+        <Styled.SocialLink
+          href="https://www.linkedin.com/in/markus-ylisiurunen-654720174/"
+          hoverColor={colors.brandLinkedin}
+          block
+        >
+          LinkedIn
+        </Styled.SocialLink>
+        <Styled.SocialLink
           href="https://github.com/markusylisiurunen"
-          target="_blank"
-          color="#171515"
+          hoverColor={colors.brandGithub}
+          block
         >
-          <Styled.SocialIcon className="fa fa-github" />
-          <span>GitHub</span>
-        </Styled.Social>
+          GitHub
+        </Styled.SocialLink>
       </Styled.SocialContainer>
-    </Layout.Col>
-    <Layout.Col spanTablet={6}>
-      <Styled.Intro>
-        I am a 21-year-old computer science student majoring in Software
-        Engineering and minorint in Machine Learning. I have started getting
-        into programming at around the age 15 and since then I have been
-        learning and trying out new things constantly.
-      </Styled.Intro>
-      <Styled.Intro>
-        Currently I am most excited about Machine Learning and Artificial
-        Intelligence and I am planning to major in that in my Master's studies.
-        I have been working almost the last two years as a software developer at{' '}
-        <a href="https://intopalodigital.fi">Intopalo Digital</a> where I have
-        got the chance to grow and learn many new valuable tehcnologies and
-        other skills.
-      </Styled.Intro>
     </Layout.Col>
   </Layout.Row>
 );
