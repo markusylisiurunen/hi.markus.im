@@ -3,8 +3,10 @@
  */
 
 import styled from 'styled-components';
+import colors from '../../utils/colors';
 
 const Container = styled.div`
+  margin-top: 48px;
   width: 100%;
 `;
 
@@ -22,7 +24,7 @@ const JobTitle = styled.p`
 `;
 
 const Dates = styled.p`
-  color: rgba(0, 0, 0, 0.4);
+  color: ${colors.textSoft};
   margin-bottom: 16px;
   margin-top: 0;
 `;

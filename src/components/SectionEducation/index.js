@@ -8,15 +8,13 @@ import Styled from './style';
 import Attachment from '../Attachment';
 import Card from '../Card';
 
-const { Container, School, Degree, Dates } = Styled;
-
 const educationData = [
   {
     school: 'Tampere University of Technology',
     degree: 'Master of Science (Technology)',
     dates: '08/2016 - present',
     description: [
-      "I have been studying Software Engineering as my major and Machine Learning as my minor for the bachelor's programme. However, I'm planning to study Machine Learning, Data Science and Artificial Intelligence as my major in the master's programme.",
+      "I am studying computer science, majoring in Software Engineering and minoring in Machine Learning. However, I'm planning to major in Machine Learning, Data Science and Artificial Intelligence in the Master's programme.",
       'You can find the most recent transcript of my study records below.',
     ],
     attachments: [
@@ -40,22 +38,22 @@ const educationData = [
 
 const CardEducation = ({ school, degree, dates, children, ...props }) => (
   <Card border="none" padding="0" {...props}>
-    <School>{school}</School>
-    <Degree>{degree}</Degree>
-    <Dates>{dates}</Dates>
+    <Styled.School>{school}</Styled.School>
+    <Styled.Degree>{degree}</Styled.Degree>
+    <Styled.Dates>{dates}</Styled.Dates>
     {children && children}
   </Card>
 );
 
 const SectionEducation = () => (
-  <Container>
+  <Styled.Container>
     <h2>Education</h2>
     {educationData.map((education, i) => (
       <CardEducation
         school={education.school}
         degree={education.degree}
         dates={education.dates}
-        marginBottom={i === educationData.length - 1 ? '0px' : '32px'}
+        marginBottom={i === educationData.length - 1 ? '0px' : '40px'}
         key={education.school + education.degree}
       >
         {education.description.map(description => (
@@ -70,7 +68,7 @@ const SectionEducation = () => (
         ))}
       </CardEducation>
     ))}
-  </Container>
+  </Styled.Container>
 );
 
 export default SectionEducation;

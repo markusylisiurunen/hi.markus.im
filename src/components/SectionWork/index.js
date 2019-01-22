@@ -42,7 +42,7 @@ const SectionWork = () => (
         employer={work.employer}
         jobTitle={work.jobTitle}
         dates={work.dates}
-        marginBottom={i === workData.length - 1 ? '0px' : '32px'}
+        marginBottom={i === workData.length - 1 ? '0px' : '40px'}
         key={work.employer + work.jobTitle}
       >
         {work.description.map(description => (

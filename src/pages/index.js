@@ -14,13 +14,9 @@ import SectionWork from '../components/SectionWork';
 
 const FrontPage = () => (
   <Layout.Container>
-    <Layout.Row>
-      <Layout.Col>
-        <Navigation />
-      </Layout.Col>
-    </Layout.Row>
+    <Navigation />
     <Bio />
-    <Layout.Row marginBottom={64}>
+    <Layout.Row marginTop={64}>
       <Layout.Col spanTablet={6}>
         <SectionEducation />
       </Layout.Col>
@@ -28,15 +24,17 @@ const FrontPage = () => (
         <SectionWork />
       </Layout.Col>
     </Layout.Row>
-    <Projects />
+    {/* <Projects /> */}
   </Layout.Container>
 );
 
 export default () => (
   <React.Fragment>
-    {/* prettier-ignore */}
     <Helmet>
-      <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css" />
+      <link
+        rel="stylesheet"
+        href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css"
+      />
       <title>Markus Ylisiurunen</title>
     </Helmet>
     <FrontPage />
