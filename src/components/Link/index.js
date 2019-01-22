@@ -12,12 +12,12 @@ const Link = ({ inline, block, color = accentPink, children, ...props }) => (
   <React.Fragment>
     {inline && (
       <Styled.LinkInline color={color} {...props}>
-        <span>{children}</span>
+        <Styled.Text>{children}</Styled.Text>
       </Styled.LinkInline>
     )}
     {block && (
       <Styled.LinkBlock color={color} {...props}>
-        <span>{children}</span>
+        <Styled.Text>{children}</Styled.Text>
         <Styled.Arrow className="fa fa-long-arrow-right" />
       </Styled.LinkBlock>
     )}

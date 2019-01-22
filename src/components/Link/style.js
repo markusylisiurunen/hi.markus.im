@@ -41,6 +41,10 @@ const LinkBlock = styled(Link)`
   display: flex;
   margin: 0 0 8px 0;
   padding: 6px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 `;
 
 export default { Text, Arrow, LinkInline, LinkBlock };
