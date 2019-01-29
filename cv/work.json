@@ -1,0 +1,16 @@
+[
+  {
+    "employer": "Intopalo Digital",
+    "jobTitle": "Software Developer",
+    "startDate": "05/2017",
+    "endDate": "present",
+    "description": ["Lorem ipsum..."],
+    "attachments": [
+      {
+        "type": "pdf",
+        "name": "Certificate of appreciation",
+        "href": ""
+      }
+    ]
+  }
+]

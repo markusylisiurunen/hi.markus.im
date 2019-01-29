@@ -1,0 +1,41 @@
+[
+  {
+    "school": "Tampere University of Technology",
+    "degree": "Master of Science (Technology)",
+    "startDate": "08/2016",
+    "endDate": "present",
+    "description": [
+      "I am studying computer science, majoring in Software Engineering and minoring in Machine Learning. However, I am planning to major in Machine Learning, Data Science and Artificial Intelligence in the Master's programme.",
+      "You can find the most recent transcript of my study records below."
+    ],
+    "attachments": [
+      {
+        "type": "pdf",
+        "name": "Study records",
+        "href": ""
+      }
+    ]
+  },
+  {
+    "school": "Ylöjärvi's upper secondary school",
+    "degree": "Undergraduate",
+    "startDate": "08/2013",
+    "endDate": "06/2016",
+    "description": [
+      "The subjects I chose for the matriculation examination were (advanced) mathematics, physics, chemistry, English and Finnish.",
+      "You can find the school leaving certificate and the matriculation examination results below."
+    ],
+    "attachments": [
+      {
+        "type": "pdf",
+        "name": "School leaving certificate",
+        "href": ""
+      },
+      {
+        "type": "pdf",
+        "name": "Matriculation examination results",
+        "href": ""
+      }
+    ]
+  }
+]
