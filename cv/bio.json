@@ -1,0 +1,23 @@
+{
+  "intro": [
+    "I am a 21-year-old computer science student studying at TUNI majoring in Software Engineering and minoring in Machine Learning. Currently I am most interested in the web as a platform, machine learning and artificial intelligence. In fact, I am planning to major in Machine Learning, Data Science and Artificial Intelligence in my Master's studies.",
+    "I have almost two years of professional experience as a software developer at Intopalo Digital where I have contributed in various customer projects. I have had the chance to grow, learn new technologies and soft skills, solve problems and have an impact on our customer's businesses."
+  ],
+  "socials": [
+    {
+      "name": "Telegram",
+      "color": "hsl(200, 100%, 40%)",
+      "href": "https://t.me/markusylisiurunen"
+    },
+    {
+      "name": "LinkedIn",
+      "color": "hsl(201, 100%, 35%)",
+      "href": "https://www.linkedin.com/in/markus-ylisiurunen-654720174"
+    },
+    {
+      "name": "GitHub",
+      "color": "hsl(0, 5%, 9%)",
+      "href": "https://github.com/markusylisiurunen"
+    }
+  ]
+}
