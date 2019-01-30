@@ -19,6 +19,7 @@ const Bio = ({ data }) => (
           href={social.href}
           color={colors.textSoft}
           hoverColor={social.color}
+          key={social.name}
           block
           css={`
             padding-left: 0;
