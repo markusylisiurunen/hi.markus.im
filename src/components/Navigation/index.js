@@ -1,12 +1,13 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import { Container, Logo } from './style'
+import { Container } from './style'
 
+import Logo from '../Logo'
 import Link from '../Link'
 
 const Navigation = ({ data }) => (
   <Container>
-    <Logo>M</Logo>
+    <Logo height="32" />
     <Link href={`mailto:${data.site.siteMetadata.email}`} block>
       Say hi
     </Link>
