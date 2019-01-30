@@ -12,7 +12,7 @@
       {
         "type": "pdf",
         "name": "Study records",
-        "href": ""
+        "fileName": "hello_world"
       }
     ]
   },
@@ -29,12 +29,12 @@
       {
         "type": "pdf",
         "name": "School leaving certificate",
-        "href": ""
+        "fileName": "hello_world"
       },
       {
         "type": "pdf",
         "name": "Matriculation examination results",
-        "href": ""
+        "fileName": "hello_world"
       }
     ]
   }
