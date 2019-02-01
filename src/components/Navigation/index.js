@@ -9,7 +9,7 @@ const Navigation = ({ data }) => (
   <Container>
     <Logo height="32" />
     <Link href={`mailto:${data.site.siteMetadata.email}`} block>
-      Say hi
+      {data.site.siteMetadata.email}
     </Link>
   </Container>
 )
