@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyledContainer, StyledRow, StyledColumn } from './style'
+import { StyledContainer, StyledRow, StyledColumn, StyledSpacer } from './style'
 
 const Container = ({ children, ...props }) => (
   <StyledContainer {...props}>{children}</StyledContainer>
@@ -13,4 +13,6 @@ const Column = ({ children, ...props }) => (
   <StyledColumn {...props}>{children}</StyledColumn>
 )
 
-export default { Container, Row, Column }
+const Spacer = props => <StyledSpacer {...props} />
+
+export default { Container, Row, Column, Spacer }

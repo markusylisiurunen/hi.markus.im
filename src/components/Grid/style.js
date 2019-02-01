@@ -3,9 +3,8 @@ import styled from 'styled-components'
 // TODO: These breakpoints could be dynamic
 const breakpoints = { md: 768, lg: 1025 }
 
-const width = spanRaw => {
-  const span = typeof spanRaw === 'string' ? parseInt(spanRaw, 10) : spanRaw
-  return `width: ${(span / 12) * 100}%;`
+const width = span => {
+  return `width: ${(parseInt(span, 10) / 12) * 100}%;`
 }
 
 export const StyledContainer = styled.div`
@@ -33,4 +32,9 @@ export const StyledColumn = styled.div`
   @media screen and (min-width: ${breakpoints.lg}px) {
     ${({ spanLg }) => spanLg && width(spanLg)}
   }
+`
+
+export const StyledSpacer = styled.div`
+  height: ${({ height }) => parseInt(height)}px;
+  width: 100%;
 `
