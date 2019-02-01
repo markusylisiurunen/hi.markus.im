@@ -18,6 +18,11 @@
       "name": "GitHub",
       "color": "hsl(0, 5%, 9%)",
       "href": "https://github.com/markusylisiurunen"
+    },
+    {
+      "name": "GitLab",
+      "color": "hsl(20, 97%, 57%)",
+      "href": "https://gitlab.com/markusylisiurunen"
     }
   ]
 }
