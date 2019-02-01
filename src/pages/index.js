@@ -2,51 +2,76 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 
-import Navigation from '../components/Navigation'
 import Bio from '../components/Bio'
 import Education from '../components/Education'
+import Grid from '../components/Grid'
+import Navigation from '../components/Navigation'
+import Project from '../components/Project'
 import Work from '../components/Work'
 
-// prettier-ignore
 const Head = () => (
   <Helmet>
     <title>Markus Ylisiurunen</title>
-    <meta name='theme-color' content="#ffffff" />
-    <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css" />
+    <meta name="theme-color" content="#ffffff" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css"
+    />
   </Helmet>
 )
 
-// prettier-ignore
 const IndexPage = ({ data }) => (
   <>
     <Head />
-    <div css={`padding: 16px; max-width: 560px; margin: 0 auto;`}>
-      <div css={`margin-top: 16px;`}>
-        <Navigation/>
-      </div>
-      <div css={`margin-top: 56px;`}>
-        <Bio />
-      </div>
-      <div css={`margin-top: 48px;`}>
-        <h2>Education</h2>
-        {data.allEducationJson.edges.map(({ node }) => (
-          <Education {...node} key={node.school} />
+    <Grid.Container>
+      <Grid.Spacer heightXs="16" heightMd="24" />
+      <Grid.Row>
+        <Grid.Column>
+          <Navigation />
+        </Grid.Column>
+      </Grid.Row>
+      <Grid.Spacer heightXs="72" heightMd="88" heightLg="120" />
+      <Grid.Row>
+        <Grid.Column spanMd="6">
+          <Bio />
+        </Grid.Column>
+      </Grid.Row>
+      <Grid.Row>
+        <Grid.Column spanMd="6">
+          <Grid.Spacer heightXs="72" heightMd="80" />
+          <h2>Education</h2>
+          {data.allEducationJson.edges.map(({ node }) => (
+            <Education {...node} key={node.school} />
+          ))}
+        </Grid.Column>
+        <Grid.Column spanMd="6">
+          <Grid.Spacer heightXs="72" heightMd="80" />
+          <h2>Work</h2>
+          {data.allWorkJson.edges.map(({ node }) => (
+            <Work {...node} key={node.employer} />
+          ))}
+        </Grid.Column>
+      </Grid.Row>
+      <Grid.Spacer height="80" />
+      <Grid.Row>
+        <Grid.Column>
+          <Grid.Spacer heightXs="72" heightMd="80" />
+          <h2>Projects</h2>
+        </Grid.Column>
+        {data.allProjectsJson.edges.map(({ node }) => (
+          <Grid.Column spanMd="4">
+            <Project {...node} key={node.name} />
+          </Grid.Column>
         ))}
-      </div>
-      <div css={`margin-top: 48px;`}>
-        <h2>Work</h2>
-        {data.allWorkJson.edges.map(({ node }) => (
-          <Work {...node} key={node.employer} />
-        ))}
-      </div>
-    </div>
+      </Grid.Row>
+    </Grid.Container>
   </>
 )
 
 export default IndexPage
 
 export const query = graphql`
-  {
+  query IndexPageQuery {
     allEducationJson {
       edges {
         node {
@@ -58,7 +83,7 @@ export const query = graphql`
           attachments {
             type
             name
-            href
+            fileName
           }
         }
       }
@@ -74,6 +99,25 @@ export const query = graphql`
           description
           attachments {
             type
+            name
+            fileName
+          }
+        }
+      }
+    }
+
+    allProjectsJson {
+      edges {
+        node {
+          name
+          keywords
+          description
+          languages {
+            name
+            color
+            size
+          }
+          repository {
             name
             href
           }
