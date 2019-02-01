@@ -3,14 +3,10 @@ import colors from '../../utils/colors'
 
 export const Container = styled.div`
   border-radius: 6px;
-  box-shadow: 0 8px 40px ${colors.shadowSoft};
   margin-bottom: 16px;
   padding: 16px;
   position: relative;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
+  border: 1px solid ${colors.borderSoft};
 `
 
 export const Name = styled.h3`
@@ -35,10 +31,10 @@ export const Description = styled.p`
 export const LanguageContainer = styled.div`
   display: flex;
   flex-wrap: no-wrap;
-  left: 0;
+  left: -1px;
   position: absolute;
-  right: 0;
-  top: 0;
+  right: -1px;
+  top: -1px;
 `
 
 export const LanguageLabel = styled.span`
