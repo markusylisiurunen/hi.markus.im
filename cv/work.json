@@ -4,7 +4,10 @@
     "jobTitle": "Software Developer",
     "startDate": "05/2017",
     "endDate": "present",
-    "description": ["Lorem ipsum..."],
+    "description": [
+      "I have been part of various customer projects doing front-end, back-end, architecture, devops and more. I have had the opportunity to learn new frameworks and technologies during the time I have been part of the team at Intopalo Digital.",
+      "I have also received a certificate of appreciation which is given to just few employees annually. You can find the certificate below."
+    ],
     "attachments": [
       {
         "type": "pdf",
