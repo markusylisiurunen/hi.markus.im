@@ -1,0 +1,90 @@
+[
+  {
+    "name": "hi.markus.im",
+    "keywords": ["React", "GraphQL", "Gatsby"],
+    "languages": [{ "name": "JavaScript", "size": 100, "color": "#f1e05a" }],
+    "description": "The website you are currently on. Its purpose is to be my CV and collect all relevant information to one place.",
+    "repository": {
+      "name": "GitHub",
+      "href": "https://github.com/markusylisiurunen/markus.im"
+    }
+  },
+  {
+    "name": "timeline",
+    "keywords": ["Node.js", "Google APIs"],
+    "languages": [{ "name": "JavaScript", "size": 100, "color": "#f1e05a" }],
+    "description": "A CLI tool for tracking time based on labels.",
+    "repository": {
+      "name": "GitHub",
+      "href": "https://github.com/markusylisiurunen/timeline"
+    }
+  },
+  {
+    "name": "Bouncing Box",
+    "keywords": ["JavaScript", "Now.sh"],
+    "languages": [
+      { "name": "JavaScript", "size": 85, "color": "#f1e05a" },
+      { "name": "HTML", "size": 11, "color": "#e34c26" },
+      { "name": "CSS", "size": 5, "color": "#563d7c" }
+    ],
+    "description": "A Flappy Bird clone which was built with Vanilla JS for the browser.",
+    "repository": {
+      "name": "GitLab",
+      "href": "https://gitlab.com/markusylisiurunen/wsd-2018-bouncing-box"
+    }
+  },
+  {
+    "name": "git-stats",
+    "keywords": ["Node.js", "Git"],
+    "languages": [{ "name": "JavaScript", "size": 100, "color": "#f1e05a" }],
+    "description": "A CLI tool for getting contribution statistics for a Git repository.",
+    "repository": {
+      "name": "GitHub",
+      "href": "https://github.com/markusylisiurunen/git-stats"
+    }
+  },
+  {
+    "name": "Car accident analysis",
+    "keywords": ["Scala", "Apache Spark", "K-Means"],
+    "languages": [{ "name": "Scala", "size": 100, "color": "#c22d40" }],
+    "description": "Analysis of car accidents in Finland. This was a course assignment.",
+    "repository": {
+      "name": "GitLab",
+      "href": "https://gitlab.com/markusylisiurunen-school/tie-22307-data-intensive-programming"
+    }
+  },
+  {
+    "name": "Vilkkulaattori",
+    "keywords": ["JavaScript", "HTML", "CSS"],
+    "languages": [
+      { "name": "JavaScript", "size": 78, "color": "#f1e05a" },
+      { "name": "HTML", "size": 15, "color": "#e34c26" },
+      { "name": "CSS", "size": 7, "color": "#563d7c" }
+    ],
+    "description": "A tiny utility web application for a course for testing a pseudo programming language.",
+    "repository": {
+      "name": "GitLab",
+      "href": "https://gitlab.com/markusylisiurunen/vilkkulaattori"
+    }
+  },
+  {
+    "name": "Spring simulation",
+    "keywords": ["Python"],
+    "languages": [{ "name": "Python", "size": 100, "color": "#3572A5" }],
+    "description": "A small spring simulation experiment in Python.",
+    "repository": {
+      "name": "GitLab",
+      "href": "https://gitlab.com/markusylisiurunen/jousi-simulaatio"
+    }
+  },
+  {
+    "name": "md-table",
+    "keywords": ["Node.js"],
+    "languages": [{ "name": "JavaScript", "size": 100, "color": "#f1e05a" }],
+    "description": "A tiny helper library for printing out markdown compatible tables to stdout.",
+    "repository": {
+      "name": "GitHub",
+      "href": "https://github.com/markusylisiurunen/md-table"
+    }
+  }
+]
