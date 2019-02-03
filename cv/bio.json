@@ -5,16 +5,6 @@
   ],
   "socials": [
     {
-      "name": "Telegram",
-      "color": "hsl(200, 100%, 40%)",
-      "href": "https://t.me/markusylisiurunen"
-    },
-    {
-      "name": "LinkedIn",
-      "color": "hsl(201, 100%, 35%)",
-      "href": "https://www.linkedin.com/in/markus-ylisiurunen-654720174"
-    },
-    {
       "name": "GitHub",
       "color": "hsl(0, 5%, 9%)",
       "href": "https://github.com/markusylisiurunen"
@@ -23,6 +13,18 @@
       "name": "GitLab",
       "color": "hsl(20, 97%, 57%)",
       "href": "https://gitlab.com/markusylisiurunen"
+    }
+  ],
+  "_temp": [
+    {
+      "name": "Telegram",
+      "color": "hsl(200, 100%, 40%)",
+      "href": "https://t.me/markusylisiurunen"
+    },
+    {
+      "name": "LinkedIn",
+      "color": "hsl(201, 100%, 35%)",
+      "href": "https://www.linkedin.com/in/markus-ylisiurunen-654720174"
     }
   ]
 }

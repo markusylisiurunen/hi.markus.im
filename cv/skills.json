@@ -1,0 +1,63 @@
+[
+  {
+    "title": "Languages",
+    "entries": [
+      { "name": "C#", "level": 1 },
+      { "name": "C++", "level": 3 },
+      { "name": "CSS", "level": 3 },
+      { "name": "HTML", "level": 3 },
+      { "name": "JavaScript", "level": 3 },
+      { "name": "Matlab", "level": 2 },
+      { "name": "Python", "level": 2 },
+      { "name": "QML", "level": 1 },
+      { "name": "Sass", "level": 3 },
+      { "name": "Scala", "level": 2 }
+    ]
+  },
+  {
+    "title": "Libraries",
+    "entries": [
+      { "name": "Akka", "level": 1 },
+      { "name": "Cypress", "level": 3 },
+      { "name": "Django", "level": 2 },
+      { "name": "Emotion", "level": 2 },
+      { "name": "Express.js", "level": 3 },
+      { "name": "Gatsby", "level": 3 },
+      { "name": "Next.js", "level": 2 },
+      { "name": "NumPy", "level": 2 },
+      { "name": "Qt", "level": 2 },
+      { "name": "React", "level": 3 },
+      { "name": "Redux", "level": 3 },
+      { "name": "Vue", "level": 3 },
+      { "name": "Vuex", "level": 3 },
+      { "name": "scikit-learn", "level": 2 },
+      { "name": "styled-components", "level": 3 }
+    ]
+  },
+  {
+    "title": "Other tools",
+    "entries": [
+      { "name": "AWS", "level": 2 },
+      { "name": "Ansible", "level": 2 },
+      { "name": "Docker", "level": 3 },
+      { "name": "Docker Swarm", "level": 3 },
+      { "name": "Jenkins", "level": 2 },
+      { "name": "Kubernetes", "level": 2 },
+      { "name": "MongoDB", "level": 3 },
+      { "name": "Nginx", "level": 3 },
+      { "name": "PostgreSQL", "level": 2 },
+      { "name": "RabbitMQ", "level": 2 },
+      { "name": "Spark", "level": 2 },
+      { "name": "Vagrant", "level": 2 },
+      { "name": "Websocket", "level": 3 }
+    ]
+  },
+  {
+    "title": "Next up",
+    "entries": [
+      { "name": "GraphQL", "level": 2 },
+      { "name": "React Hooks", "level": 1 },
+      { "name": "Tensorflow", "level": 1 }
+    ]
+  }
+]
