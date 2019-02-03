@@ -1,12 +1,12 @@
 [
   {
     "name": "hi.markus.im",
-    "keywords": ["React", "GraphQL", "Gatsby"],
+    "keywords": ["React", "Gatsby", "GraphQL"],
     "languages": [{ "name": "JavaScript", "size": 100, "color": "#f1e05a" }],
-    "description": "The website you are currently on. Its purpose is to be my CV and collect all relevant information to one place.",
+    "description": "My personal website. Its purpose is to be my CV and present all relevant information in one place.",
     "repository": {
       "name": "GitHub",
-      "href": "https://github.com/markusylisiurunen/markus.im"
+      "href": "https://github.com/markusylisiurunen/hi.markus.im"
     }
   },
   {
@@ -21,7 +21,7 @@
   },
   {
     "name": "Bouncing Box",
-    "keywords": ["JavaScript", "Now.sh"],
+    "keywords": ["JavaScript", "Game", "Now.sh"],
     "languages": [
       { "name": "JavaScript", "size": 85, "color": "#f1e05a" },
       { "name": "HTML", "size": 11, "color": "#e34c26" },
@@ -47,7 +47,7 @@
     "name": "Car accident analysis",
     "keywords": ["Scala", "Apache Spark", "K-Means"],
     "languages": [{ "name": "Scala", "size": 100, "color": "#c22d40" }],
-    "description": "Analysis of car accidents in Finland. This was a course assignment.",
+    "description": "Analysis of car accidents in Finland. This was a course assignment and is based on the K-Means algorithm.",
     "repository": {
       "name": "GitLab",
       "href": "https://gitlab.com/markusylisiurunen-school/tie-22307-data-intensive-programming"
@@ -71,7 +71,7 @@
       { "name": "HTML", "size": 15, "color": "#e34c26" },
       { "name": "CSS", "size": 7, "color": "#563d7c" }
     ],
-    "description": "A tiny utility web application for a course for testing a pseudo programming language.",
+    "description": "A small utility web application for a course for testing a pseudo programming language.",
     "repository": {
       "name": "GitLab",
       "href": "https://gitlab.com/markusylisiurunen/vilkkulaattori"
@@ -91,7 +91,7 @@
     "name": "md-table",
     "keywords": ["Node.js"],
     "languages": [{ "name": "JavaScript", "size": 100, "color": "#f1e05a" }],
-    "description": "A tiny helper library for printing out markdown compatible tables to stdout.",
+    "description": "A tiny helper library for printing markdown compatible tables to terminal.",
     "repository": {
       "name": "GitHub",
       "href": "https://github.com/markusylisiurunen/md-table"

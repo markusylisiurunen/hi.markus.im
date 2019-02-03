@@ -2,62 +2,66 @@
   {
     "title": "Languages",
     "entries": [
-      { "name": "C#", "level": 1 },
-      { "name": "C++", "level": 3 },
-      { "name": "CSS", "level": 3 },
-      { "name": "HTML", "level": 3 },
-      { "name": "JavaScript", "level": 3 },
-      { "name": "Matlab", "level": 2 },
-      { "name": "Python", "level": 2 },
-      { "name": "QML", "level": 1 },
-      { "name": "Sass", "level": 3 },
-      { "name": "Scala", "level": 2 }
+      { "name": "C#", "level": "Used" },
+      { "name": "C++", "level": "Comfortable" },
+      { "name": "CSS", "level": "Pro" },
+      { "name": "HTML", "level": "Pro" },
+      { "name": "Java", "level": "Used" },
+      { "name": "JavaScript", "level": "Pro" },
+      { "name": "LaTeX", "level": "Used" },
+      { "name": "Matlab", "level": "Comfortable" },
+      { "name": "PHP", "level": "Comfortable" },
+      { "name": "Python", "level": "Comfortable" },
+      { "name": "QML", "level": "Used" },
+      { "name": "SQL", "level": "Comfortable" },
+      { "name": "Sass", "level": "Pro" },
+      { "name": "Scala", "level": "Comfortable" }
     ]
   },
   {
     "title": "Libraries",
     "entries": [
-      { "name": "Akka", "level": 1 },
-      { "name": "Cypress", "level": 3 },
-      { "name": "Django", "level": 2 },
-      { "name": "Emotion", "level": 2 },
-      { "name": "Express.js", "level": 3 },
-      { "name": "Gatsby", "level": 3 },
-      { "name": "Next.js", "level": 2 },
-      { "name": "NumPy", "level": 2 },
-      { "name": "Qt", "level": 2 },
-      { "name": "React", "level": 3 },
-      { "name": "Redux", "level": 3 },
-      { "name": "Vue", "level": 3 },
-      { "name": "Vuex", "level": 3 },
-      { "name": "scikit-learn", "level": 2 },
-      { "name": "styled-components", "level": 3 }
+      { "name": "Akka", "level": "Used" },
+      { "name": "Cypress", "level": "Comfortable" },
+      { "name": "Django", "level": "Comfortable" },
+      { "name": "Emotion", "level": "Comfortable" },
+      { "name": "Express.js", "level": "Pro" },
+      { "name": "Gatsby", "level": "Pro" },
+      { "name": "Next.js", "level": "Comfortable" },
+      { "name": "NumPy", "level": "Comfortable" },
+      { "name": "Qt", "level": "Comfortable" },
+      { "name": "React", "level": "Pro" },
+      { "name": "Redux", "level": "Pro" },
+      { "name": "Vue", "level": "Pro" },
+      { "name": "Vuex", "level": "Pro" },
+      { "name": "scikit-learn", "level": "Comfortable" },
+      { "name": "styled-components", "level": "Pro" }
     ]
   },
   {
     "title": "Other tools",
     "entries": [
-      { "name": "AWS", "level": 2 },
-      { "name": "Ansible", "level": 2 },
-      { "name": "Docker", "level": 3 },
-      { "name": "Docker Swarm", "level": 3 },
-      { "name": "Jenkins", "level": 2 },
-      { "name": "Kubernetes", "level": 2 },
-      { "name": "MongoDB", "level": 3 },
-      { "name": "Nginx", "level": 3 },
-      { "name": "PostgreSQL", "level": 2 },
-      { "name": "RabbitMQ", "level": 2 },
-      { "name": "Spark", "level": 2 },
-      { "name": "Vagrant", "level": 2 },
-      { "name": "Websocket", "level": 3 }
+      { "name": "AWS", "level": "Comfortable" },
+      { "name": "Ansible", "level": "Comfortable" },
+      { "name": "Docker", "level": "Pro" },
+      { "name": "Docker Swarm", "level": "Pro" },
+      { "name": "Jenkins", "level": "Comfortable" },
+      { "name": "Kubernetes", "level": "Comfortable" },
+      { "name": "MongoDB", "level": "Pro" },
+      { "name": "Nginx", "level": "Comfortable" },
+      { "name": "PostgreSQL", "level": "Comfortable" },
+      { "name": "RabbitMQ", "level": "Comfortable" },
+      { "name": "Spark", "level": "Comfortable" },
+      { "name": "Vagrant", "level": "Comfortable" },
+      { "name": "Websocket", "level": "Pro" }
     ]
   },
   {
     "title": "Next up",
     "entries": [
-      { "name": "GraphQL", "level": 2 },
-      { "name": "React Hooks", "level": 1 },
-      { "name": "Tensorflow", "level": 1 }
+      { "name": "GraphQL", "level": "Comfortable" },
+      { "name": "React Hooks", "level": "Used" },
+      { "name": "Tensorflow", "level": "Used" }
     ]
   }
 ]
