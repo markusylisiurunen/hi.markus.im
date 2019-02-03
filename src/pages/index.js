@@ -6,7 +6,7 @@ import Education from '../components/Education'
 import Grid from '../components/Grid'
 import Head from '../components/Head'
 import Navigation from '../components/Navigation'
-import Project from '../components/Project'
+import Projects from '../components/Projects'
 import Skills from '../components/Skills'
 import Work from '../components/Work'
 
@@ -26,7 +26,7 @@ const IndexPage = ({ data }) => (
           <Bio />
         </Grid.Column>
       </Grid.Row>
-      <Grid.Spacer heightXs="72" heightMd="88" heightLg="120" />
+      <Grid.Spacer heightXs="72" heightMd="80" />
       <Grid.Row>
         <Grid.Column>
           <Skills />
@@ -48,16 +48,11 @@ const IndexPage = ({ data }) => (
           ))}
         </Grid.Column>
       </Grid.Row>
+      <Grid.Spacer heightXs="72" heightMd="80" />
       <Grid.Row>
         <Grid.Column>
-          <Grid.Spacer heightXs="72" heightMd="80" />
-          <h2>Projects</h2>
+          <Projects />
         </Grid.Column>
-        {data.allProjectsJson.edges.map(({ node }) => (
-          <Grid.Column spanMd="4" key={node.name}>
-            <Project {...node} />
-          </Grid.Column>
-        ))}
       </Grid.Row>
       <Grid.Spacer heightXs="40" />
     </Grid.Container>
@@ -97,25 +92,6 @@ export const query = graphql`
             type
             name
             fileName
-          }
-        }
-      }
-    }
-
-    allProjectsJson {
-      edges {
-        node {
-          name
-          keywords
-          description
-          languages {
-            name
-            color
-            size
-          }
-          repository {
-            name
-            href
           }
         }
       }
