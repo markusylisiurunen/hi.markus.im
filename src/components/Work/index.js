@@ -1,6 +1,5 @@
 import React from 'react'
 import { Container, Employer, JobTitle, Dates, Description } from './style'
-import Attachment from '../Attachment'
 
 const Work = ({
   employer,
@@ -19,7 +18,7 @@ const Work = ({
         <Description key={section}>{section}</Description>
       ))}
     </div>
-    {Array.isArray(attachments) && attachments.length && (
+    {/* {Array.isArray(attachments) && attachments.length && (
       <div
         css={`
           padding-top: 24px;
@@ -29,7 +28,7 @@ const Work = ({
           <Attachment {...attachment} key={attachment.name} />
         ))}
       </div>
-    )}
+    )} */}
   </Container>
 )
 

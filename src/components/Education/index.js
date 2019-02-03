@@ -1,6 +1,5 @@
 import React from 'react'
 import { Container, School, Degree, Dates, Description } from './style'
-import Attachment from '../Attachment'
 
 const Education = ({
   school,
@@ -19,7 +18,7 @@ const Education = ({
         <Description key={section}>{section}</Description>
       ))}
     </div>
-    {Array.isArray(attachments) && attachments.length && (
+    {/* {Array.isArray(attachments) && attachments.length && (
       <div
         css={`
           padding-top: 24px;
@@ -29,7 +28,7 @@ const Education = ({
           <Attachment {...attachment} key={attachment.name} />
         ))}
       </div>
-    )}
+    )} */}
   </Container>
 )
 

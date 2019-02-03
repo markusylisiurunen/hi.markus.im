@@ -3,14 +3,13 @@ import { StaticQuery, graphql } from 'gatsby'
 import { Container } from './style'
 
 import Logo from '../Logo'
-import Link from '../Link'
 
 const Navigation = ({ data }) => (
   <Container>
     <Logo height="32" />
-    <Link href={`mailto:${data.site.siteMetadata.email}`} block>
+    {/* <Link href={`mailto:${data.site.siteMetadata.email}`} block>
       {data.site.siteMetadata.email}
-    </Link>
+    </Link> */}
   </Container>
 )
 

@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import colors from '../../utils/colors'
 
 export const Container = styled.div`
-  margin-bottom: 32px;
+  margin-bottom: 48px;
 
   &:last-child {
     margin-bottom: 0;

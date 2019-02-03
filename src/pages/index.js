@@ -1,24 +1,14 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Helmet from 'react-helmet'
 
 import Bio from '../components/Bio'
 import Education from '../components/Education'
 import Grid from '../components/Grid'
+import Head from '../components/Head'
 import Navigation from '../components/Navigation'
 import Project from '../components/Project'
+import Skills from '../components/Skills'
 import Work from '../components/Work'
-
-const Head = () => (
-  <Helmet>
-    <title>Markus Ylisiurunen</title>
-    <meta name="theme-color" content="#ffffff" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css"
-    />
-  </Helmet>
-)
 
 const IndexPage = ({ data }) => (
   <>
@@ -34,6 +24,12 @@ const IndexPage = ({ data }) => (
       <Grid.Row>
         <Grid.Column spanMd="6">
           <Bio />
+        </Grid.Column>
+      </Grid.Row>
+      <Grid.Spacer heightXs="72" heightMd="88" heightLg="120" />
+      <Grid.Row>
+        <Grid.Column>
+          <Skills />
         </Grid.Column>
       </Grid.Row>
       <Grid.Row>
@@ -52,18 +48,18 @@ const IndexPage = ({ data }) => (
           ))}
         </Grid.Column>
       </Grid.Row>
-      <Grid.Spacer height="80" />
       <Grid.Row>
         <Grid.Column>
           <Grid.Spacer heightXs="72" heightMd="80" />
           <h2>Projects</h2>
         </Grid.Column>
         {data.allProjectsJson.edges.map(({ node }) => (
-          <Grid.Column spanMd="4">
-            <Project {...node} key={node.name} />
+          <Grid.Column spanMd="4" key={node.name}>
+            <Project {...node} />
           </Grid.Column>
         ))}
       </Grid.Row>
+      <Grid.Spacer heightXs="40" />
     </Grid.Container>
   </>
 )
