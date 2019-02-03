@@ -54,6 +54,16 @@
     }
   },
   {
+    "name": "Live support widget",
+    "keywords": ["Design", "Figma"],
+    "languages": [],
+    "description": "A design project for an embeddable live chat support widget.",
+    "repository": {
+      "name": "GitLab",
+      "href": "https://gitlab.com/markusylisiurunen/live-support"
+    }
+  },
+  {
     "name": "Vilkkulaattori",
     "keywords": ["JavaScript", "HTML", "CSS"],
     "languages": [
