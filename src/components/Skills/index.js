@@ -1,8 +1,16 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import { Container, Item, Title, Skill, SkillName, SkillLevel, Explainer } from './style'
+import {
+  Container,
+  Item,
+  Title,
+  Skill,
+  SkillName,
+  SkillLevel,
+  Explainer,
+} from './style'
 
-const SKILL_LEVELS = ['Familiar', 'Comfortable', 'Pro']
+const SKILL_LEVELS = ['used', 'comfortable', 'pro']
 
 const Skills = () => (
   <StaticQuery
@@ -31,8 +39,12 @@ const Skills = () => (
               <div>
                 {node.entries.map(skill => (
                   <Skill key={skill.name}>
-                    <SkillName level={skill.level}>{skill.name}</SkillName>
-                    <SkillLevel>{SKILL_LEVELS[skill.level - 1]}</SkillLevel>
+                    <SkillName
+                      level={SKILL_LEVELS.indexOf(skill.level.toLowerCase())}
+                    >
+                      {skill.name}
+                    </SkillName>
+                    <SkillLevel>{skill.level}</SkillLevel>
                   </Skill>
                 ))}
               </div>
