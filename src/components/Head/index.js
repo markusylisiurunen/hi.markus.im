@@ -24,6 +24,10 @@ const Head = () => (
       <Helmet>
         <title>Markus Ylisiurunen</title>
         <meta name="theme-color" content="#ffffff" />
+        <meta
+          name="google-site-verification"
+          content="4l7ZDWTHgsiDpR90hmIqKDr2_9p-ofnBKjjGJh8gygQ"
+        />
         <link
           rel="shortcut icon"
           type="image/png"
