@@ -1,9 +1,19 @@
 [
   {
+    "employer": "Reaktor",
+    "jobTitle": "Software Developer",
+    "startDate": "06/2019",
+    "endDate": "09/2019",
+    "description": [
+      "I was part of a project team with two UI/UX designers and two developers building a web application with speech recognition capabilities for a customer. I had to work with all parts of the stack and take responsibility for the whole project."
+    ],
+    "attachments": []
+  },
+  {
     "employer": "Intopalo Digital",
     "jobTitle": "Software Developer",
     "startDate": "05/2017",
-    "endDate": "present",
+    "endDate": "06/2019",
     "description": [
       "I have been part of various customer projects doing front-end, back-end, architecture, DevOps and more. I have had the opportunity to grow, learn new technologies and contrubite to various projects during the time I have been part of the team at Intopalo Digital.",
       "I have also received a certificate of appreciation which is given to just few employees annually for their contributions during the last year."

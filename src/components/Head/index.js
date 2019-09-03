@@ -9,7 +9,7 @@ const Head = () => (
         allFile(
           filter: {
             sourceInstanceName: { eq: "images" }
-            name: { eq: "logo@0.5x" }
+            name: { eq: "Logo@0.5x" }
           }
         ) {
           edges {

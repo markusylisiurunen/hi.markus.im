@@ -30,6 +30,7 @@
       { "name": "Next.js", "level": "Comfortable" },
       { "name": "NumPy", "level": "Comfortable" },
       { "name": "Qt", "level": "Comfortable" },
+      { "name": "React Hooks", "level": "Pro" },
       { "name": "React", "level": "Pro" },
       { "name": "Redux", "level": "Pro" },
       { "name": "Vue", "level": "Pro" },
@@ -60,7 +61,6 @@
     "title": "Next up",
     "entries": [
       { "name": "GraphQL", "level": "Comfortable" },
-      { "name": "React Hooks", "level": "Used" },
       { "name": "Tensorflow", "level": "Used" }
     ]
   }

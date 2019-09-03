@@ -20,6 +20,16 @@
     }
   },
   {
+    "name": "cli",
+    "keywords": ["Node.js"],
+    "languages": [{ "name": "JavaScript", "size": 100, "color": "#f1e05a" }],
+    "description": "A minimal framework for building fully-featured CLI applications.",
+    "repository": {
+      "name": "GitHub",
+      "href": "https://github.com/markusylisiurunen/cli"
+    }
+  },
+  {
     "name": "Bouncing Box",
     "keywords": ["JavaScript", "Game", "Now.sh"],
     "languages": [

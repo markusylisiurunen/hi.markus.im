@@ -1,12 +1,22 @@
 [
   {
+    "school": "Aalto University",
+    "degree": "Master of Science",
+    "startDate": "09/2019",
+    "endDate": "present",
+    "description": [
+      "I am studying Machine Learning, Data Science and Artificial Intelligence at Aalto University.",
+      "Currently I am the most interested in learning to apply machine learning techniques to real world problems and potentially do some research in the field in the future."
+    ],
+    "attachments": []
+  },
+  {
     "school": "Tampere University of Technology",
     "degree": "Master of Science (Technology)",
     "startDate": "08/2016",
-    "endDate": "present",
+    "endDate": "05/2019",
     "description": [
-      "I am studying computer science, majoring in software engineering and minoring in machine learning. However, I am planning to major in Machine Learning, Data Science and Artificial Intelligence in the master's programme.",
-      "Currently I am the most interested in learning to apply machine learning techniques to real world problems and potentially do some research in the field in the future."
+      "I studied computer science, majored in software engineering and minored in machine learning."
     ],
     "attachments": [
       {
